@@ -8,7 +8,7 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.testng.annotations.Test;
 
-public class TC004_GET_Request_PrintAllHeaders {
+public class GETRequestPrintAllHeaders {
 
     @Test
     public void GetWeatherDetails(){

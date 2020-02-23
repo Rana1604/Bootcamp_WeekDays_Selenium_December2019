@@ -8,7 +8,7 @@ import io.restassured.specification.RequestSpecification;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TC_007_GET_Request_Authorization {
+public class GETRequestAuthorization {
 
     @Test
     public void AuthorizationTest(){
@@ -25,7 +25,7 @@ public class TC_007_GET_Request_Authorization {
 
         RequestSpecification httpRequest = RestAssured.given();
 
-        Response response = httpRequest.request(Method.GET, "/");
+        Response response = httpRequest.request(Method.GET, "=");
 
 
         String responseBody = response.getBody().asString();

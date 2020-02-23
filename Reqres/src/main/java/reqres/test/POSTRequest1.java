@@ -8,7 +8,7 @@ import org.json.simple.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TC002_POST_Request {
+public class POSTRequest1 {
 
     @Test
     void RegistrationSuccessful(){
@@ -24,11 +24,11 @@ public class TC002_POST_Request {
         //Request payload sending along with post request
         JSONObject requestParam = new JSONObject();
 
-        requestParam.put("FirstName", "JohnXYZ");
-        requestParam.put("LastName", "XYZJohn");
-        requestParam.put("UserName", "JohnXYZdowe0009");
-        requestParam.put("Password", "JohnXYZxyz");
-        requestParam.put("Email", "JohnDowe@gmail.com");
+        requestParam.put("FirstName", "Johathon");
+        requestParam.put("LastName", "Trot");
+        requestParam.put("UserName", "Jtrot");
+        requestParam.put("Password", "54321");
+        requestParam.put("Email", "jtrot@gmail.com");
 
         httpRequest.header("Content-Type", "application/json");
 

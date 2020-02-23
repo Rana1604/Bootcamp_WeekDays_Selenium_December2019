@@ -7,7 +7,7 @@ import io.restassured.specification.RequestSpecification;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TC001_GET_Request {
+public class GETRequest {
 
     @Test
     void getWeatherDetails(){
@@ -19,7 +19,7 @@ public class TC001_GET_Request {
         RequestSpecification httprequest = RestAssured.given();
 
         //Response object
-        Response response = httprequest.request(Method.GET, "/New York");
+        Response response = httprequest.request(Method.GET, "/Queens");
 
         //print response in console window
         String responseBody = response.getBody().asString();

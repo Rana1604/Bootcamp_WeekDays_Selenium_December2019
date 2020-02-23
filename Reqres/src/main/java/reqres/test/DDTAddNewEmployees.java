@@ -8,7 +8,7 @@ import org.json.simple.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TC008_DDT_AddNewEmployees {
+public class DDTAddNewEmployees {
     @Test
     void postNewEmployees(){
         RestAssured.baseURI = "http://dummy.restapiexample.com/api/v1";
@@ -19,9 +19,9 @@ public class TC008_DDT_AddNewEmployees {
         //Here we created data that we can send along with teh post request.
         JSONObject requestParams = new JSONObject();
 
-        requestParams.put("name", "SanuwarTheBoss");
-        requestParams.put("salary", "545");
-        requestParams.put("age", "34");
+        requestParams.put("name", "Rana");
+        requestParams.put("salary", "2000");
+        requestParams.put("age", "33");
 
         //Add a header stating the request body is a JSON
         httpReqeust.header("Content-Type", "application/json");
@@ -35,9 +35,9 @@ public class TC008_DDT_AddNewEmployees {
         //Capturing the response body ot perform validation
         String responseBody= response.getBody().asString();
 
-        Assert.assertEquals(responseBody.contains("Sanuwar"), true);
-        Assert.assertEquals(responseBody.contains("540"), true);
-        Assert.assertEquals(responseBody.contains("34"), true);
+        Assert.assertEquals(responseBody.contains("Rana"), true);
+        Assert.assertEquals(responseBody.contains("2000"), true);
+        Assert.assertEquals(responseBody.contains("33"), true);
 
         int statusCode = response.getStatusCode();
 

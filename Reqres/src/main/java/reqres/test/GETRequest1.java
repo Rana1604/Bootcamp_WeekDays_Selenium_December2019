@@ -6,7 +6,7 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.testng.annotations.Test;
 
-public class TC003_GET_Request {
+public class GETRequest1 {
 
     @Test
     void googleMapTest(){

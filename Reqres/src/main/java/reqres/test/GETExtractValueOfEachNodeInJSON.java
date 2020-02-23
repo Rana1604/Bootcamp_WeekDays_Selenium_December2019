@@ -7,7 +7,7 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.testng.annotations.Test;
 
-public class TC006_GET_ExtractValueOfEachNodeInJSON {
+public class GETExtractValueOfEachNodeInJSON {
 
     @Test
     void GetWhetherDetails(){
@@ -16,7 +16,7 @@ public class TC006_GET_ExtractValueOfEachNodeInJSON {
 
         RequestSpecification httpRequest = RestAssured.given();
 
-        Response response = httpRequest.request(Method.GET, "/Delhi");
+        Response response = httpRequest.request(Method.GET, "/New York");
 
 
         JsonPath jsonpath = response.jsonPath();
