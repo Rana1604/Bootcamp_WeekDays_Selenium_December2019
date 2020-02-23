@@ -12,6 +12,9 @@
         <module>Generic</module>
         <module>LetsKodeIt</module>
         <module>JqueryUI</module>
+        <module>Twitter</module>
+        <module>Reqres</module>
+        <module>Google</module>
     </modules>
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -44,6 +47,7 @@
                 <artifactId>testng</artifactId>
                 <version>7.1.0</version>
             </dependency>
+
 
             <dependency>
                 <groupId>org.mongodb</groupId>
@@ -124,11 +128,19 @@
                 <type>pom</type>
             </dependency>
 
+            <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-picocontainer -->
             <dependency>
-                <groupId>org.testng</groupId>
-                <artifactId>testng</artifactId>
-                <version>6.14.3</version>
+                <groupId>io.cucumber</groupId>
+                <artifactId>cucumber-picocontainer</artifactId>
+                <version>5.1.3</version>
             </dependency>
+            <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
+            <dependency>
+                <groupId>io.cucumber</groupId>
+                <artifactId>cucumber-testng</artifactId>
+                <version>5.1.3</version>
+            </dependency>
+
             <!-- for using RestAssured -->
             <dependency>
                 <groupId>io.rest-assured</groupId>
@@ -212,7 +224,34 @@
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
-        </plugins>
+
+        <!-- Reporting -->
+        <plugin>
+            <groupId>net.masterthought</groupId>
+            <artifactId>maven-cucumber-reporting</artifactId>
+            <version>3.8.0</version>
+            <executions>
+                <execution>
+                    <id>execution</id>
+                    <phase>verify</phase>
+                    <goals>
+                        <goal>generate</goal>
+                    </goals>
+                    <configuration>
+                        <projectName>Bootcamp_WeekDays_Selenium_December2019</projectName>
+                        <outputDirectory>${project.build.directory}/cucumber-reports</outputDirectory>
+                        <cucumberOutput>${project.build.directory}/cucumber-reports/cucumber.json</cucumberOutput>
+                        <!--<parallel>dataproviderthreadcount</parallel>-->
+                        <!--&lt;!&ndash; 	<parallel>classes</parallel> &ndash;&gt;-->
+                        <!--<threadCount>2</threadCount>-->
+                    </configuration>
+                </execution>
+
+            </executions>
+        </plugin>
+
+
+    </plugins>
     </build>
 
 

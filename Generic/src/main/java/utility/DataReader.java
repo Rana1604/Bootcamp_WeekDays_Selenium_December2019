@@ -13,13 +13,13 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 public class DataReader {
-    HSSFWorkbook wb = null;
-    HSSFSheet sheet = null;
-    Cell cell = null;
-    FileOutputStream fio = null;
-    int numberOfRows, numberOfCol, rowNum;
+    static HSSFWorkbook wb = null;
+    static HSSFSheet sheet = null;
+    static Cell cell = null;
+    static FileOutputStream fio = null;
+    static int numberOfRows, numberOfCol, rowNum;
 
-    public String[][] fileReader1(String path, int sheetIndex) throws IOException {
+    public static String[][] fileReader1(String path, int sheetIndex) throws IOException {
         String[][] data = {};
         File file = new File(path);
         FileInputStream fis = new FileInputStream(file);
@@ -27,9 +27,9 @@ public class DataReader {
         sheet = wb.getSheetAt(sheetIndex);
         numberOfRows = sheet.getLastRowNum();
         numberOfCol = sheet.getRow(0).getLastCellNum();
-        data = new String[numberOfRows + 1][numberOfCol + 1];
+        data = new String[numberOfRows + 0][numberOfCol + 0];
 
-        for (int i = 1; i < data.length; i++) {
+        for (int i = 0; i < data.length; i++) {
             HSSFRow rows = sheet.getRow(i);
             for (int j = 0; j < numberOfCol; j++) {
                 HSSFCell cell = rows.getCell(j);
@@ -40,7 +40,7 @@ public class DataReader {
         return data;
     }
 
-    public String[] fileReader2(String path, int sheetIndex) throws IOException {
+    public static String[] fileReader2(String path, int sheetIndex) throws IOException {
         String[] data = {};
         File file = new File(path);
         FileInputStream fis = new FileInputStream(file);
@@ -61,7 +61,7 @@ public class DataReader {
         return data;
     }
 
-    public String getCellValue(HSSFCell cell) {
+    public static String getCellValue(HSSFCell cell) {
         Object value = null;
 
         int dataType = cell.getCellType();
@@ -80,17 +80,18 @@ public class DataReader {
 
     }
 
-    public void writeBack(String value) throws IOException {
+    public static void writeBack(String path, String value ) throws IOException {
         wb = new HSSFWorkbook();
         sheet = wb.createSheet();
         Row row = sheet.createRow(rowNum);
         row.setHeightInPoints(10);
 
-        fio = new FileOutputStream(new File("ExcelFile.xls"));
+        fio = new FileOutputStream(new File(path));
         wb.write(fio);
         for (int i = 0; i < row.getLastCellNum(); i++) {
             row.createCell(i);
             cell.setCellValue(value);
+
         }
         fio.close();
         wb.close();

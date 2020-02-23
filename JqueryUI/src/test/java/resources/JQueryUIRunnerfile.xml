@@ -16,9 +16,10 @@
     <!--    <parameter name="browserName" value="firefox"/>-->
     <!--    <parameter name="browserVersion" value="77"/>-->
 <!--    <parameter name="url" value="https://www.americanexpress.com/"/>-->
-    <parameter name="url" value="https://learn.letskodeit.com/"/>
-    <!--    <parameter name="url" value="http://demo.automationtesting.in/Frames.html"/>-->
-    <test name="LetsKodit Home">
+<!--    <parameter name="url" value="https://learn.letskodeit.com/"/>-->
+    <parameter name="url" value="https://jqueryui.com/"/>
+<!--        <parameter name="url" value="http://demo.automationtesting.in/Frames.html"/>-->
+    <test name="JQueryUI Home">
         <classes>
             <class name="test.TestHomePage"/>
 

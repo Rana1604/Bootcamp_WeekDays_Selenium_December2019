@@ -119,11 +119,13 @@
                 <artifactId>cucumber-java</artifactId>
                 <type>pom</type>
             </dependency>
-            <dependency>
-                <groupId>org.testng</groupId>
-                <artifactId>testng</artifactId>
 
-            </dependency>
+                <dependency>
+                    <groupId>io.cucumber</groupId>
+                    <artifactId>cucumber-testng</artifactId>
+                </dependency>
+
+
             <!-- for using RestAssured -->
             <dependency>
                 <groupId>io.rest-assured</groupId>
