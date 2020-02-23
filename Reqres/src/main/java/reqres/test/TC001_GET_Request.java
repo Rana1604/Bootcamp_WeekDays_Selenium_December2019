@@ -1,4 +1,4 @@
-package testReqres;
+package reqres.test;
 
 import io.restassured.RestAssured;
 import io.restassured.http.Method;
@@ -7,14 +7,13 @@ import io.restassured.specification.RequestSpecification;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TestReqresAPI {
-
+public class TC001_GET_Request {
 
     @Test
     void getWeatherDetails(){
 
         //Specify base URI
-        RestAssured.baseURI = "https://reqres.in/";
+        RestAssured.baseURI = "http://restapi.demoqa.com/utilities/weather/city";
 
         //Request object
         RequestSpecification httprequest = RestAssured.given();

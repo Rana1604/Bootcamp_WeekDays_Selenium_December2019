@@ -15,7 +15,7 @@ public class TestPage extends Homepage {
    @Test
     public static void searchFromDatabase() throws Exception {
         setBrowser();
-        //System.out.println(ConnectToSqlDB.readDataBase("shuvro","search").get(0));
+        //System.out.println(ConnectToSqlDB.readDataBase("shuvro","search").reqres.get(0));
         for (int i = 0; i< ConnectToSqlDB.readDataBase("Rana","search").size(); i++) {
             driver.findElement(By.xpath(searchBox)).sendKeys(ConnectToSqlDB.readDataBase("Rana","search").get(i), Keys.ENTER);
             sleepFor(2);
@@ -32,7 +32,7 @@ public class TestPage extends Homepage {
 
 
         setBrowser();
-        //System.out.println(ConnectToSqlDB.readDataBase("shuvro","search").get(0));
+        //System.out.println(ConnectToSqlDB.readDataBase("shuvro","search").reqres.get(0));
         String[] [] file = DataReader.fileReader1("/Users/tofayelrana/IdeaProjects/Bootcamp_WeekDays_Selenium_December2019/Generic/src/main/java/fileReader/FileReader.xls",0) ;
         for (int i = 0; i< file.length; i++) {
             System.out.println(file[i] [0] +" ");

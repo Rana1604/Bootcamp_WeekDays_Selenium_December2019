@@ -467,7 +467,7 @@ public class WebAPI {
         driver.switchTo().defaultContent();
     }
 
-    //get Links
+    //reqres.get Links
     public void getLinks(String locator) {
         driver.findElement(By.linkText(locator)).findElement(By.tagName("a")).getText();
     }
@@ -553,7 +553,7 @@ public class WebAPI {
         List<WebElement> activeLinks = new ArrayList<WebElement>();
         //Step:2-->Iterate linksList: exclude all links/images which does not have any href attribute
         for (int i = 0; i < linkslist.size(); i++) {
-            //System.out.println(linkslist.get(i).getAttribute("href"));
+            //System.out.println(linkslist.reqres.get(i).getAttribute("href"));
             if (linkslist.get(i).getAttribute("href") != null && (!linkslist.get(i).getAttribute("href").contains("javascript") && (!linkslist.get(i).getAttribute("href").contains("mailto")))) {
                 activeLinks.add(linkslist.get(i));
             }

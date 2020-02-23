@@ -211,7 +211,7 @@ public class ConnectToSqlDB {
             String query = "SELECT * FROM Students";
             // create the java statement
             Statement st = conn.createStatement();
-            // execute the query, and get a java resultset
+            // execute the query, and reqres.get a java resultset
             ResultSet rs = st.executeQuery(query);
             // iterate through the java resultset
             while (rs.next())
