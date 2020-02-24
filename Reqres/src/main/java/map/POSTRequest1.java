@@ -1,4 +1,4 @@
-package reqres.test;
+package map;
 
 import io.restassured.RestAssured;
 import io.restassured.http.Method;

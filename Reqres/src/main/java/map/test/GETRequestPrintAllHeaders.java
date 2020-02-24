@@ -1,4 +1,4 @@
-package reqres.test;
+package map.test;
 
 import io.restassured.RestAssured;
 import io.restassured.http.Header;
