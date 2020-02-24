@@ -7,7 +7,7 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.testng.annotations.Test;
 
-public class GETExtractValueOfEachNodeInJSON {
+public class GETValueOfEachNode {
 
     @Test
     void GetWhetherDetails(){

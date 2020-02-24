@@ -9,7 +9,7 @@ import io.restassured.specification.RequestSpecification;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class ValidatingJSONResponse {
+public class ValidatingResponse2 {
 
     @Test
     void GetWhetherDetails(){
@@ -18,12 +18,12 @@ public class ValidatingJSONResponse {
 
         RequestSpecification httpRequest = RestAssured.given();
 
-        Response response = httpRequest.request(Method.GET, "/Jamaica");
+        Response response = httpRequest.request(Method.GET, "/Astoria");
 
         String responseBody = response.getBody().asString();
         System.out.println("Response body is :" + responseBody);
 
-        Assert.assertEquals(responseBody.contains("Jamaica"),true);
+        Assert.assertEquals(responseBody.contains("Astoria"),true);
 
         Headers allheaders = response.headers();
 

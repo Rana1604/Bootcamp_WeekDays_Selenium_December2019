@@ -8,7 +8,7 @@ import org.json.simple.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class DDTAddNewEmployees {
+public class CreateNewEmployees {
     @Test
     void postNewEmployees(){
         RestAssured.baseURI = "http://dummy.restapiexample.com/api/v1";
