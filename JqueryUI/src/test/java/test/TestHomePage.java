@@ -104,13 +104,7 @@ public class TestHomePage extends HomePagePageObject {
 //        clickOnElement(xPathJQueryCalenderbox);
 //        calenderDays(xPathJQueryCalenderbox);
 //    }
-//    //This is for Facebook
-//    @Test
-//    public void testCalenderDayFacebook(){
-//        getInItElements();
-//        clickOnElement(xPathFacebookCreateAccount);
-//        calenderDays(xPathFacebookSelectDay);
-//    }
+
 
 //    @Test
 //    public void testDropDown(){
